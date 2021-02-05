@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+        
+        
+        <style>
+          * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: "Work Sans", sans-serif;
+  font-style: italic;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #9b908e;
+  z-index: 2;
+}
+
+header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+header nav ul li {
+  margin-right: 3rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #e5e5e5;
+  font-size: 2rem;
+  padding: 0.5rem 2.5rem;
+  border-radius: 5rem;
+}
+
+header nav ul li a:hover {
+  background: #766a69;
+}
+
+header .fa-bars {
+  font-size: 3.5rem;
+  color: #e5e5e5;
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+}
+
+header .logo {
+  text-decoration: none;
+}
+
+header .logo h1 {
+  font-size: 4rem;
+  font-family: "Lobster", sans-serif;
+  color: #e5e5e5;
+}
+
+#home {
+  min-height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding: 0 6rem;
+  background: #9b908e;
+}
+
+#home .image img {
+  width: 50vw;
+}
+
+#home .content h1 {
+  font-size: 5rem;
+  font-weight: normal;
+  color: #e5e5e5;
+}
+
+#home .content h1 span {
+  color: #fff;
+  font-family: "Lobster", sans-serif;
+}
+
+#home .content button {
+  outline: none;
+  border: none;
+  background: #766a69;
+  color: #e5e5e5;
+  border-radius: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 2rem 0;
+  height: 4rem;
+  width: 14rem;
+}
+
+#home .content button:hover {
+  background: #333;
+}
+
+#home .content .icons {
+  margin: 2rem 0;
+}
+
+#home .content .icons a {
+  text-decoration: none;
+  font-size: 3rem;
+  margin: 0 1rem;
+  color: #e5e5e5;
+}
+
+#home .content .icons a:hover {
+  color: #766a69;
+}
+
+#about {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+#about h1 {
+  font-size: 4rem;
+  margin: 4rem 0;
+  color: #766a69;
+  position: relative;
+}
+
+#about h1::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #766a69;
+  height: 0.4rem;
+  width: 80%;
+}
+
+#about .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#about .wrapper .image img {
+  width: 30vw;
+}
+
+#about .wrapper .content {
+  width: 50vw;
+}
+
+#about .wrapper .content h3 {
+  font-size: 4rem;
+  color: #9b908e;
+}
+
+#about .wrapper .content p {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #333;
+}
+
+#about .wrapper .content button {
+  outline: none;
+  border: none;
+  background: #766a69;
+  color: #e5e5e5;
+  border-radius: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 2rem 0;
+  height: 4rem;
+  width: 24rem;
+}
+
+#about .wrapper .content button:hover {
+  background: #333;
+}
+
+#skill {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background: #e5e5e5;
+}
+
+#skill h1 {
+  font-size: 4rem;
+  margin: 4rem 0;
+  color: #766a69;
+  position: relative;
+}
+
+#skill h1::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #766a69;
+  height: 0.4rem;
+  width: 80%;
+}
+
+#skill .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 90%;
+}
+
+#skill .wrapper .image {
+  width: 35vw;
+}
+
+#skill .wrapper .image p {
+  font-size: 1.3rem;
+  margin: 2rem 0;
+}
+
+#skill .wrapper .image img {
+  width: 30vw;
+}
+
+#skill .progress {
+  width: 45vw;
+}
+
+#skill .progress h3 {
+  font-size: 3rem;
+  color: #766a69;
+}
+
+#skill .progress .line {
+  height: 1rem;
+  width: 90%;
+  background: #9b908e;
+  margin: 2rem 0;
+}
+
+#skill .progress .line .fill {
+  height: 100%;
+  width: 100%;
+  background: #333;
+  display: block;
+}
+
+#skill .progress .line1 .fill {
+  width: 95%;
+}
+
+#skill .progress .line2 .fill {
+  width: 85%;
+}
+
+#skill .progress .line3 .fill {
+  width: 65%;
+}
+
+#skill .progress .line4 .fill {
+  width: 75%;
+}
+
+#work {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background: #766a69;
+}
+
+#work h1 {
+  font-size: 4rem;
+  margin: 4rem 0;
+  color: #766a69;
+  position: relative;
+  color: #e5e5e5;
+}
+
+#work h1::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #766a69;
+  height: 0.4rem;
+  width: 80%;
+}
+
+#work h1:after {
+  background: #e5e5e5;
+}
+
+#work .box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 90%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#work .box-container .box {
+  height: 20rem;
+  width: 30rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0 1rem #333;
+  box-shadow: 0 0 1rem #333;
+  margin: 2rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#work .box-container .box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#work .box-container .box button {
+  outline: none;
+  border: none;
+  background: #766a69;
+  color: #e5e5e5;
+  border-radius: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 2rem 0;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  height: 4rem;
+  width: 16rem;
+  z-index: 1;
+}
+
+#work .box-container .box button:hover {
+  background: #333;
+}
+
+#work .box-container .box:hover button {
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#work .box-container .box:hover img {
+  -webkit-filter: blur(0.5rem);
+  filter: blur(0.5rem);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+#contact {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background: url(../images/back.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#contact h1 {
+  font-size: 4rem;
+  margin: 4rem 0;
+  color: #766a69;
+  position: relative;
+  color: #e5e5e5;
+}
+
+#contact h1::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #766a69;
+  height: 0.4rem;
+  width: 80%;
+}
+
+#contact h1:after {
+  background: #e5e5e5;
+}
+
+#contact .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 90%;
+}
+
+#contact .wrapper .info {
+  width: 20%;
+}
+
+#contact .wrapper .info .item {
+  margin: 4rem 0;
+}
+
+#contact .wrapper .info .item h2 {
+  font-size: 3rem;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+#contact .wrapper .info .item h2 i {
+  color: gold;
+  padding: 0 0.5rem;
+}
+
+#contact .wrapper .info .item p {
+  font-size: 2rem;
+  color: #e5e5e5;
+  padding-left: 4rem;
+}
+
+#contact .wrapper form {
+  width: 50vw;
+}
+
+#contact .wrapper form .inputBox h3 {
+  font-size: 2rem;
+  color: #e5e5e5;
+}
+
+#contact .wrapper form .inputBox input,
+#contact .wrapper form .inputBox textarea {
+  outline: none;
+  border: 0.2rem solid #e5e5e5;
+  background: none;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  color: #e5e5e5;
+  font-size: 1.7rem;
+  font-weight: bold;
+  height: 4rem;
+  width: 100%;
+}
+
+#contact .wrapper form .inputBox textarea {
+  resize: none;
+  padding: 1rem;
+  height: 20rem;
+}
+
+#contact .wrapper form input[type="submit"] {
+  outline: none;
+  border: none;
+  background: #766a69;
+  color: #e5e5e5;
+  border-radius: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 2rem 0;
+  height: 4rem;
+  width: 14rem;
+  background: #e5e5e5;
+  color: #766a69;
+}
+
+#contact .wrapper form input[type="submit"]:hover {
+  background: #333;
+}
+
+#contact .wrapper form input[type="submit"]:hover {
+  background: gold;
+}
+
+#footer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  background: #333;
+}
+
+#footer .logo {
+  text-decoration: none;
+}
+
+#footer .logo h1 {
+  font-size: 3rem;
+  font-family: "Lobster", sans-serif;
+  color: #e5e5e5;
+  margin: 2rem 0;
+}
+
+#footer .icons {
+  margin: 2rem 0;
+}
+
+#footer .icons a {
+  text-decoration: none;
+  font-size: 3rem;
+  margin: 0 1rem;
+  color: #e5e5e5;
+}
+
+#footer .icons a:hover {
+  color: #766a69;
+}
+
+#footer h1 {
+  margin: 1rem 0;
+  font-size: 2rem;
+  color: #e5e5e5;
+}
+
+#footer h1 span {
+  color: gold;
+}
+
+.fa-times {
+  -webkit-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 45%;
+  }
+  header .fa-bars {
+    display: block;
+  }
+  header nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 35rem;
+    background: #9b908e;
+    -webkit-box-shadow: 0.2rem 0 0.5rem #333;
+    box-shadow: 0.2rem 0 0.5rem #333;
+  }
+  header nav ul {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  header nav ul li {
+    margin: 2rem 0;
+  }
+  header nav ul li a {
+    font-size: 4rem;
+  }
+  #about .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+  #about .wrapper .image img {
+    width: 60vw;
+  }
+  #about .wrapper .content {
+    width: 90vw;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .nav-toggle {
+    left: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  #home {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: column-reverse;
+    flex-flow: column-reverse;
+    padding: 0;
+  }
+  #home .content {
+    text-align: center;
+  }
+  #home .image img {
+    width: 100vw;
+  }
+  #skill .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+  #skill .wrapper .image {
+    width: 100%;
+  }
+  #skill .wrapper .image p {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #skill .wrapper .image img {
+    width: 90vw;
+  }
+  #skill .progress {
+    margin: 3rem 0;
+    width: 100%;
+  }
+  #skill .progress .line {
+    width: 100%;
+  }
+  #contact .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+  #contact .wrapper .info {
+    width: 100%;
+  }
+  #contact .wrapper form {
+    width: 100%;
+  }
+}
+
+        </style>
+       
+        <link rel="shortcut icon" href="./Assets/fevicon.JPG" type="image/x-icon">
+    </head>
+    <title>My Portfolio</title>
+  <body>
+    <!-- header section starts -->
+
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skill">Skills</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="fas fa-bars"></div>
+
+      <a href="./portfolio.html" class="logo"><h1>Portfolio</h1></a>
+    </header>
+
+    <!-- header section ends -->
+    <!-- home section starts -->
+
+    <section id="home">
+      <div class="content">
+        <h1>
+          Hi, <br />
+          i am <span>Japkirat Singh</span>
+        </h1>
+
+        <h1>i am a <span>Web Devlopment Student</span></h1>
+
+        <a href="#about"><button>about me</button></a>
+
+        <div class="icons">
+          <a
+            href="https://www.facebook.com/japkiratjas/"
+            class="fab fa-facebook-square"
+          ></a>
+          <a href="https://twitter.com/?lang=en" class="fab fa-twitter-square"></a>
+          <a
+            href="https://www.instagram.com/ivixmmxx/"
+            class="fab fa-instagram-square"
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/japkirat-singh-7831b81b1/"
+            class="fab fa-linkedin"
+          ></a>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="./Assets/IMG_9093 2.jpg" alt="aboutimg" />
+      </div>
+    </section>
+
+    <!-- home section ends -->
+    <!-- about section starts  -->
+
+    <section id="about">
+      <h1>about</h1>
+
+      <div class="wrapper">
+        <div class="image">
+          <img src="./Assets/IMG_9090.jpg" alt="aboutimg" />
+        </div>
+
+        <div class="content">
+          <h3>my name is Japkirat Singh</h3>
+          <p>
+            Hello and welcome to my profile page, i'm basically from
+            Punjab,India. I migrated to California, USA with my family 3 Years
+            back and so far i'hv been loving living here.
+          </p>
+          <br />
+          <p>
+            I am a accounting major with with a keen interest in web devlopmemnt
+            and project management and since September 2020 i've also devoted
+            myself in getting versed and educated in them and now i'm a part of
+            a bootcamp which is helping my interest to grow and expoosing me to
+            a brand new career path ,"Web Devlopment".
+          </p>
+          <a href="./Assets/Japkirat_Singh_Resume.PDF"><button>download resume</button></a>
+        </div>
+      </div>
+    </section>
+     <!-- about section ends  -->
+    <!-- skills section starts  -->
+
+    <section id="skill">
+      <h1>skills</h1>
+
+      <div class="wrapper">
+        <div class="image">
+          <p>
+            I'm pretty comfortable working with html and css at this point while
+            i'm still working on my java script skills but designing images and
+            some parts of the websites with photoshop is a skill which i've
+            devloped on an advance level.
+          </p>
+          <img src="./Assets/skill-img.jpg" alt="skills-img" />
+        </div>
+
+        <div class="progress">
+          <h3>html</h3>
+          <div class="line line1"><span class="fill"></span></div>
+
+          <h3>css</h3>
+          <div class="line line2"><span class="fill"></span></div>
+
+          <h3>javascript</h3>
+          <div class="line line3"><span class="fill"></span></div>
+
+          <h3>photoshop</h3>
+          <div class="line line4"><span class="fill"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills section ends  -->
+    <!-- work section starts  -->
+
+    <section id="work">
+      <h1>work</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="./Assets/work1.png" alt="project1" />
+          <a href="https://github.com/JAPKIRAT96/Project-1-"><button>view details</button></a>
+        </div>
+
+        <div class="box">
+          <img src="./Assets/work2.png" alt="daycare" />
+          <a href="https://starwidecare.herokuapp.com"><button>view details</button></a>
+        </div>
+
+        <div class="box">
+          <img src="./Assets/work3.png" alt="quizapp" />
+          <a href="https://github.com/JAPKIRAT96/Lets-quiz"><button>view details</button></a>
+        </div>
+
+        <div class="box">
+          <img src="./Assets/work4.png" alt="weatherapp" />
+          <a href="https://github.com/JAPKIRAT96/Weather.App"><button>view details</button></a>
+        </div>
+
+    
+    </section>
+
+    <!-- work section ends  -->
+    <!-- contact section starts  -->
+
+<section id="contact">
+
+    <h1>contact</h1>
+    
+    <div class="wrapper">
+    
+    <div class="info">
+    
+        <div class="item">
+            <h2><i class="fas fa-map-marker-alt"></i> Address </h2>
+            <p>Fremont,<br>
+                California-94538   
+              </p>
+        </div>
+    
+        <div class="item">
+            <h2><i class="fas fa-envelope"></i> e-mail </h2>
+            <p>japkirats@gmail.com</p>
+        </div>
+    
+        <div class="item">
+            <h2><i class="fas fa-phone"></i> Phone </h2>
+            <p>+1(510)602-1036</p>
+        </div>
+    
+    </div>
+    
+    <form action="">
+    
+        <div class="inputBox">
+            <h3>Full Name</h3>
+            <input type="text">
+        </div>
+    
+        <div class="inputBox">
+            <h3>E-Mail</h3>
+            <input type="email">
+        </div>
+    
+        <div class="inputBox">
+            <h3>Message</h3>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+    
+        <input type="submit" value="send">
+    
+    </form>
+    
+    </div>
+    
+    
+    </section>
+    
+    <!-- contact section ends  -->
+    <!-- footer section starts  -->
+
+<section id="footer">
+
+    <div class="icons">
+        <a href="https://www.facebook.com/japkiratjas/" class="fab fa-facebook-square"></a>
+        <a href="https://twitter.com/?lang=en" class="fab fa-twitter-square"></a>
+        <a href="https://www.instagram.com/ivixmmxx/" class="fab fa-instagram-square"></a>
+        <a href="https://www.linkedin.com/in/japkirat-singh-7831b81b1/" class="fab fa-linkedin"></a>
+    </div>
+
+    <h1>&copy; copyright @ 2020 by <span>japkirat singh</span></h1>
+
+</section>
+
+<!-- footer section ends  -->
+
+<!-- jquery/js part -->
+<script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+
+<script>
+
+    $(document).ready(function(){
+    
+        $('.fa-bars').click(function(){
+            $(this).toggleClass('fa-times');
+            $('nav').toggleClass('nav-toggle');
+        });
+    
+        $('nav ul li a').click(function(){
+            $('.fa-bars').removeClass('fa-times');
+            $('nav').removeClass('nav-toggle');
+        });
+    
+        $(window).scroll(function(){
+            if($(window).scrollTop() < 20){
+                $('header').css('box-shadow','none');
+            }else{
+                $('header').css('box-shadow','0 .2rem .5rem #333');
+            }
+        });
+    
+    });
+    
+    </script>
+    <!-- Font Awsum starts -->
+    
+
+<script src="https://kit.fontawesome.com/15a06ea919.js" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
